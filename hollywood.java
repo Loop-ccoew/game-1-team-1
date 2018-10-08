@@ -25,28 +25,32 @@ public class hollywood
                 for(int i=0;i<9;i++)
                 System.out.print(m[i]);
             }
-            if(ch=='s')
+            else if(ch=='s')
             {
                 System.out.println("CONGRATULATIONS YOUR GUESS IS CORRECT");
                 m[5]='S';
                 for(int i=0;i<9;i++)
                 System.out.print(m[i]);
             }
-            if(ch=='t')
+            else if(ch=='t')
             {
                 System.out.println("CONGRATULATIONS YOUR GUESS IS CORRECT");
                 m[6]='T';
                 for(int i=0;i<9;i++)
                 System.out.print(m[i]);
             }
-            if(ch=='y')
+            else if(ch=='y')
             {
                 System.out.println("CONGRATULATIONS YOUR GUESS IS CORRECT");
                 m[8]='Y';
                 for(int i=0;i<9;i++)
                 System.out.print(m[i]);
             }
-            else
+            else if(m[1]=='F' && m[5]=='S' && m[6]=='T' && m[8]=='Y')
+            { System.out.println("YOU WON");
+                break;
+            }
+            else 
             {
                 System.out.println("You lost a chance");
                 h[x]=' ';
@@ -58,10 +62,6 @@ public class hollywood
                     System.out.println("YOU LOST");
                     f++;
                 }
-            }
-            if(m[1]=='F' && m[5]=='S' && m[6]=='T' && m[8]=='Y')
-            { System.out.println("YOU WON");
-                break;
             }
         }
     }
